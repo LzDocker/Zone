@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
@@ -32,10 +33,9 @@ import butterknife.OnClick;
 
 public class HomeActivity extends AppCompatActivity {
 
-    SharedPreferences sp ;
+    SharedPreferences sp;
     @BindView(R.id.viewpager)
-    NoScrollViewPager viewPager ;
-
+    NoScrollViewPager viewPager;
 
     @BindView(R.id.btn_start)
     RadioButton start;
@@ -55,10 +55,8 @@ public class HomeActivity extends AppCompatActivity {
     RadioButton mine;
 
 
-
-
     ArrayList<Fragment> flist = new ArrayList<>();
-    public  User user;
+    public User user;
 
 
     private ArrayList<Fragment> fragments = new ArrayList<>();
@@ -124,7 +122,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }*/
 
-    public  void initview(){
+    public void initview() {
 
         StartFragment startFragment = new StartFragment();
         DisFragment disFragment = new DisFragment();
@@ -137,53 +135,52 @@ public class HomeActivity extends AppCompatActivity {
         fragments.add(msgFragment);
         fragments.add(mineFragment);
 
-        MypagerAdapter  adapter = new MypagerAdapter(getSupportFragmentManager(),fragments);
-        viewPager.noScroll=true;
+        MypagerAdapter adapter = new MypagerAdapter(getSupportFragmentManager(), fragments);
+        viewPager.noScroll = true;
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(4);
         viewPager.setCurrentItem(0);
     }
 
 
-
-    @OnClick({ R.id.btn_start, R.id.btn_dis, R.id.btn_msg,R.id.btn_mine,R.id.image_add })
+    @OnClick({R.id.btn_start, R.id.btn_dis, R.id.btn_msg, R.id.btn_mine, R.id.image_add})
     public void onClick(View view) {
 
 
-        switch (view.getId()){
+        switch (view.getId()) {
 
             case R.id.btn_start:
                 currentIndex = 0;
 
-              viewPager.setCurrentItem(0,false);
+                viewPager.setCurrentItem(0, false);
 
 
                 break;
 
-            case  R.id.btn_dis:
+            case R.id.btn_dis:
 
-               viewPager.setCurrentItem(1,false);
-
-
-                break;
-
-            case  R.id.btn_msg:
-
-             viewPager.setCurrentItem(2,false);
-
-                break;
-
-            case  R.id.btn_mine:
-
-                viewPager.setCurrentItem(3,false);
+                viewPager.setCurrentItem(1, false);
 
 
                 break;
 
-            case  R.id.image_add:
+            case R.id.btn_msg:
+
+                viewPager.setCurrentItem(2, false);
+
+                break;
+
+            case R.id.btn_mine:
+
+                viewPager.setCurrentItem(3, false);
+
+
+                break;
+
+            case R.id.image_add:
 
                 Intent intent = new Intent(HomeActivity.this, EditActivity.class);
-                intent.putExtra("user",user);
+                intent.putExtra("user", user);
                 startActivity(intent);
 
                 break;
@@ -194,10 +191,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+    public User getUser() {
 
-    public User getUser(){
-
-        return  user;
+        return user;
     }
 
 

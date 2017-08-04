@@ -47,4 +47,5 @@ dependencies {
     compile 'cn.kevin:bannerview:1.0.0'
 
 
+    compile project(path: ':base')
 }
