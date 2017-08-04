@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dip"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ivm_icon"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="name" />
+            <TextView
+                android:id="@+id/user_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="desc" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/tv_comments"
+        android:textSize="12sp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这里是评论的内容 可以评论啊 小伙子" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30条回复"
+            android:padding="2dp"
+            android:textSize="13sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_repycount"
+            />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="@drawable/shape_text_zhuti"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tv_reply"
+            android:text="回复该评论"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></LinearLayout>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sub_list"
+            android:scrollbars="none"
+            android:layout_marginTop="10dp"
+            android:divider="#fff"
+            >
+
+        </ListView>
+
+
+
+
+</LinearLayout>
