@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.dcoker.zone.home.fragment.StartFragment"
 
     >
@@ -19,192 +19,186 @@
         app:point_gravity="bottom_center" />
 
 
-<HorizontalScrollView
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:scrollbars="none"
-    android:layout_below="@+id/bvp"
-    android:layout_marginTop="10dp"
-    android:gravity="center"
-    android:id="@+id/srcoll"
-    >
-
-    <LinearLayout
+    <HorizontalScrollView
+        android:id="@+id/srcoll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        >
+        android:layout_height="50dp"
+        android:layout_below="@+id/bvp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:scrollbars="none">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:background="#FFA500"
-            android:gravity="center"
-            android:text="8月热文"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_marginLeft="15dp"
-            android:gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="生活碎文"
-            android:background="#FFB90F"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="#FFA500"
+                android:gravity="center"
+                android:text="8月热文"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="签约作者"
-            android:background="#EE9572"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            />
- <TextView
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="碎碎念"
-            android:background="#EE6A50"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            />
-<TextView
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="Zone 精品"
-            android:background="#EE1289"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:background="#FFB90F"
+                android:gravity="center"
+                android:text="生活碎文"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="Zone 招聘"
-            android:background="#EE5C42"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:text="哇咔咔"
-            android:background="#CD5B45"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#EE9572"
+                android:gravity="center"
+                android:text="签约作者"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#EE6A50"
+                android:gravity="center"
+                android:text="碎碎念"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
-</HorizontalScrollView>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#EE1289"
+                android:gravity="center"
+                android:text="Zone 精品"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#EE5C42"
+                android:gravity="center"
+                android:text="Zone 招聘"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginTop="18dp"
-    android:layout_below="@+id/srcoll"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#CD5B45"
+                android:gravity="center"
+                android:text="哇咔咔"
+                android:textColor="#fff"
+                android:textSize="16sp" />
 
-    >
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="热门专题"
-        android:textColor="@color/colorPrimary"
-        android:layout_marginLeft="5dp"
-
-        />
+    </HorizontalScrollView>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="18dp"
-        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/srcoll"
         android:layout_marginTop="18dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+
         >
 
         <TextView
-            android:gravity="center"
-            android:padding="3dp"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/shape_text"
-            android:text="漫画手绘"
-            android:textColor="#FFA500"
-            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="热门专题"
+            android:textColor="@color/colorPrimary"
+
             />
-      <TextView
-            android:gravity="center"
-            android:padding="3dp"
-            android:layout_gravity="center"
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_text"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="漫画手绘"
+                android:textColor="#FFA500"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_text"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="上班这点事"
+                android:textColor="#FFA500"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_text"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="技术论坛"
+                android:textColor="#FFA500"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_text"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="黄牛的春天"
+                android:textColor="#FFA500"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/shape_text"
-            android:text="上班这点事"
-            android:textColor="#FFA500"
-            android:textSize="12sp"
-            android:layout_marginLeft="20dp"
-            /> <TextView
-            android:gravity="center"
-            android:padding="3dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/shape_text"
-            android:text="技术论坛"
-            android:textColor="#FFA500"
-            android:textSize="12sp"
-            android:layout_marginLeft="20dp"
-            />
-<TextView
-            android:gravity="center"
-            android:padding="3dp"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/shape_text"
-            android:text="黄牛的春天"
-            android:textColor="#FFA500"
-            android:textSize="12sp"
-            android:layout_marginLeft="20dp"
-            />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="18dp"
+            android:text="热门文章"
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="热门文章"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="18dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_marginLeft="5dp"
-        />
-
-</LinearLayout>
-
 
 
 </RelativeLayout>

@@ -21,10 +21,10 @@
             android:gravity="center"
             android:text="发现好文"
             android:textColor="#fff"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_centerVertical="true"
@@ -33,37 +33,40 @@
             android:layout_toEndOf="@+id/tv_title"
             android:layout_toRightOf="@+id/tv_title"
             android:background="@mipmap/setting"
-            android:id="@+id/imageView"
-            android:visibility="invisible"
-            />
+            android:visibility="invisible" />
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@mipmap/menu"
             android:layout_alignBottom="@+id/imageView"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="13dp"
+            android:layout_alignParentRight="true"
             android:layout_marginEnd="13dp"
-            android:visibility="gone"
-            />
+            android:layout_marginRight="13dp"
+            android:background="@mipmap/menu"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
-
-    <ListView
-        android:id="@+id/listview"
+    <com.dcoker.zone.widget.SwipeRecyclerView
+        android:id="@+id/refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cacheColorHint="#fff"
-        android:divider="#00000000"
-        android:fadingEdge="none"
-        android:listSelector="@android:color/transparent"
-        android:overScrollMode="never"
-        android:dividerHeight="25dp"
-        android:scrollbars="none"
-        />
+        android:layout_height="match_parent">
+
+    </com.dcoker.zone.widget.SwipeRecyclerView>
+
+
+    <!--<ListView-->
+    <!--android:id="@+id/listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:cacheColorHint="#fff"-->
+    <!--android:divider="#00000000"-->
+    <!--android:dividerHeight="25dp"-->
+    <!--android:fadingEdge="none"-->
+    <!--android:listSelector="@android:color/transparent"-->
+    <!--android:overScrollMode="never"-->
+    <!--android:scrollbars="none" />-->
 
 
 </LinearLayout>

@@ -1,1 +1,1 @@
-include ':app', ':base'
+include ':app', ':module-base', ':module-index', ':module-discovery', ':module-publish', ':module-im', ':module-myself', ':module-account'

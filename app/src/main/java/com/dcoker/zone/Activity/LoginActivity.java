@@ -23,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.dcoker.zone.R;
 import com.dcoker.zone.config.NetConfig;
 import com.dcoker.zone.entity.Result;
@@ -34,9 +35,11 @@ import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.callback.StringCallback;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 public class LoginActivity extends Activity {
 
     @BindView(R.id.logo)
@@ -81,9 +84,9 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
         mContext = this;
         //透明状态栏
-       // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //透明导航栏
-       // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
 
         ButterKnife.bind(this);
@@ -97,10 +100,11 @@ public class LoginActivity extends Activity {
     }
 
 
-
     private void initView() {
         screenHeight = this.getResources().getDisplayMetrics().heightPixels; //获取屏幕高度
         keyHeight = screenHeight / 3;//弹起高度为屏幕高度的1/3
+        mEtMobile.setText("apache");
+        mEtPassword.setText("122");
     }
 
     private void initEvent() {
@@ -198,18 +202,16 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
 
 
-
-
                 // 登录
 
                 String name = mEtMobile.getText().toString().trim();
-                String pwd =  mEtPassword.getText().toString().trim();
+                String pwd = mEtPassword.getText().toString().trim();
 
 
-                if(!TextUtils.isEmpty(name)&&!TextUtils.isEmpty(pwd)){
+                if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(pwd)) {
                     RxKeyboardUtils.hideSoftInput((Activity) mContext);
-                    login(name,pwd);
-                }else{
+                    login(name, pwd);
+                } else {
                     Toast.makeText(mContext, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
                 }
 
@@ -248,12 +250,7 @@ public class LoginActivity extends Activity {
     }
 
 
-
-    public void login(String name,String pwd){
-
-
-
-
+    public void login(String name, String pwd) {
 
 
         ////////////////////////////////////////////
@@ -261,8 +258,8 @@ public class LoginActivity extends Activity {
         OkGo.<String>get(NetConfig.LOGIN)
                 .cacheMode(CacheMode.NO_CACHE)
                 .cacheKey("lOGINActivity")
-                .params("name",name)
-                .params("pwd",pwd)
+                .params("name", name)
+                .params("pwd", pwd)
                 .tag(this)
                 .execute(new StringCallback() {
                     @Override
@@ -270,19 +267,19 @@ public class LoginActivity extends Activity {
 
 
                         String s = response.body().toString();
-                        if(!TextUtils.isEmpty(s)){
+                        if (!TextUtils.isEmpty(s)) {
 
                             Gson gson = new Gson();
-                            Result userinfo =  gson.fromJson(s, Result.class);
+                            Result userinfo = gson.fromJson(s, Result.class);
 
-                            if(userinfo.getState()){
-                                final User user =  userinfo.getData().getUser();
+                            if (userinfo.getState()) {
+                                final User user = userinfo.getData().getUser();
 
-                                if(user!=null&&!"".equals(user)){
+                                if (user != null && !"".equals(user)) {
 
 
-                                    Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
-                                    intent.putExtra("user",user);
+                                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                    intent.putExtra("user", user);
                                     startActivity(intent);
 
                                    /* Intent intent = new Intent(LoginActivity.this,CommentDetilActivity.class);
@@ -292,12 +289,12 @@ public class LoginActivity extends Activity {
 
                                 }
 
-                            }else{
+                            } else {
 
-                                if(userinfo.getError()!=null&&!"".equals(userinfo.getError())){
+                                if (userinfo.getError() != null && !"".equals(userinfo.getError())) {
                                     Toast.makeText(getApplicationContext(), userinfo.getError(), Toast.LENGTH_SHORT).show();
 
-                                }else {
+                                } else {
 
                                     Toast.makeText(getApplicationContext(), "网络断开了", Toast.LENGTH_SHORT).show();
 
@@ -314,8 +311,6 @@ public class LoginActivity extends Activity {
 
 
     }
-
-
 
 
 }

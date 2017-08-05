@@ -32,8 +32,8 @@ public class hotAdapter extends BaseAdapter {
     HotArticleBean data;
         Activity context;
 
-        public hotAdapter(Activity context , HotArticleBean data){
-            this.data =data;
+        public hotAdapter(Activity context){
+
             this.context=context;
 
         }
