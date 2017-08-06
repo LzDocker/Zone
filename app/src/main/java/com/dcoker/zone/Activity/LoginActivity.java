@@ -83,6 +83,8 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mContext = this;
+
+
         //透明状态栏
         // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //透明导航栏
@@ -98,7 +100,6 @@ public class LoginActivity extends Activity {
         initEvent();
 
     }
-
 
     private void initView() {
         screenHeight = this.getResources().getDisplayMetrics().heightPixels; //获取屏幕高度
@@ -252,9 +253,6 @@ public class LoginActivity extends Activity {
 
     public void login(String name, String pwd) {
 
-
-        ////////////////////////////////////////////
-
         OkGo.<String>get(NetConfig.LOGIN)
                 .cacheMode(CacheMode.NO_CACHE)
                 .cacheKey("lOGINActivity")
@@ -281,35 +279,22 @@ public class LoginActivity extends Activity {
                                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                     intent.putExtra("user", user);
                                     startActivity(intent);
-
                                    /* Intent intent = new Intent(LoginActivity.this,CommentDetilActivity.class);
                                     intent.putExtra("user",user);
                                     startActivity(intent);*/
                                     finish();
-
-                                }
-
-                            } else {
-
-                                if (userinfo.getError() != null && !"".equals(userinfo.getError())) {
-                                    Toast.makeText(getApplicationContext(), userinfo.getError(), Toast.LENGTH_SHORT).show();
-
                                 } else {
-
-                                    Toast.makeText(getApplicationContext(), "网络断开了", Toast.LENGTH_SHORT).show();
-
+                                    if (userinfo.getError() != null && !"".equals(userinfo.getError())) {
+                                        Toast.makeText(getApplicationContext(), userinfo.getError(), Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "网络断开了", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-
                             }
-
                         }
-
-
                     }
 
                 });
-
-
     }
 
 
