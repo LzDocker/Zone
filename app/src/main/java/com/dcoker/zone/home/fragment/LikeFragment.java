@@ -92,9 +92,9 @@ public class LikeFragment extends BaseFragment {
 
 //创建默认的线性LayoutManager
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-      //  recycleview.setLayoutManager(mLayoutManager);
+        //recycleview.setLayoutManager(mLayoutManager);
 //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
-       // recycleview.setHasFixedSize(true);
+      //  recycleview.setHasFixedSize(true);
 
         LikeAdapter mAdapter = new LikeAdapter(data,activity);
 
