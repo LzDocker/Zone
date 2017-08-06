@@ -5,11 +5,39 @@
       <module fileurl="file://$PROJECT_DIR$/Zone.iml" filepath="$PROJECT_DIR$/Zone.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-account/module-account.iml" filepath="$PROJECT_DIR$/module-account/module-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-account/module-account.iml" filepath="$PROJECT_DIR$/module-account/module-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-account/module-account.iml" filepath="$PROJECT_DIR$/module-account/module-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-account/module-account.iml" filepath="$PROJECT_DIR$/module-account/module-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-account/module-account.iml" filepath="$PROJECT_DIR$/module-account/module-account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-base/module-base.iml" filepath="$PROJECT_DIR$/module-base/module-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-base/module-base.iml" filepath="$PROJECT_DIR$/module-base/module-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-base/module-base.iml" filepath="$PROJECT_DIR$/module-base/module-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-base/module-base.iml" filepath="$PROJECT_DIR$/module-base/module-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-base/module-base.iml" filepath="$PROJECT_DIR$/module-base/module-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-discovery/module-discovery.iml" filepath="$PROJECT_DIR$/module-discovery/module-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-discovery/module-discovery.iml" filepath="$PROJECT_DIR$/module-discovery/module-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-discovery/module-discovery.iml" filepath="$PROJECT_DIR$/module-discovery/module-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-discovery/module-discovery.iml" filepath="$PROJECT_DIR$/module-discovery/module-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-discovery/module-discovery.iml" filepath="$PROJECT_DIR$/module-discovery/module-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-im/module-im.iml" filepath="$PROJECT_DIR$/module-im/module-im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-im/module-im.iml" filepath="$PROJECT_DIR$/module-im/module-im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-im/module-im.iml" filepath="$PROJECT_DIR$/module-im/module-im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-im/module-im.iml" filepath="$PROJECT_DIR$/module-im/module-im.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-im/module-im.iml" filepath="$PROJECT_DIR$/module-im/module-im.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-index/module-index.iml" filepath="$PROJECT_DIR$/module-index/module-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-index/module-index.iml" filepath="$PROJECT_DIR$/module-index/module-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-index/module-index.iml" filepath="$PROJECT_DIR$/module-index/module-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-index/module-index.iml" filepath="$PROJECT_DIR$/module-index/module-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-index/module-index.iml" filepath="$PROJECT_DIR$/module-index/module-index.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-myself/module-myself.iml" filepath="$PROJECT_DIR$/module-myself/module-myself.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-myself/module-myself.iml" filepath="$PROJECT_DIR$/module-myself/module-myself.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-myself/module-myself.iml" filepath="$PROJECT_DIR$/module-myself/module-myself.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-myself/module-myself.iml" filepath="$PROJECT_DIR$/module-myself/module-myself.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-myself/module-myself.iml" filepath="$PROJECT_DIR$/module-myself/module-myself.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-publish/module-publish.iml" filepath="$PROJECT_DIR$/module-publish/module-publish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-publish/module-publish.iml" filepath="$PROJECT_DIR$/module-publish/module-publish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-publish/module-publish.iml" filepath="$PROJECT_DIR$/module-publish/module-publish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module-publish/module-publish.iml" filepath="$PROJECT_DIR$/module-publish/module-publish.iml" />
       <module fileurl="file://$PROJECT_DIR$/module-publish/module-publish.iml" filepath="$PROJECT_DIR$/module-publish/module-publish.iml" />
     </modules>
   </component>
