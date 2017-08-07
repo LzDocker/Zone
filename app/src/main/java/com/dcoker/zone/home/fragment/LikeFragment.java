@@ -116,8 +116,5 @@ public class LikeFragment extends BaseFragment {
 
             }
         });
-
     }
-
-
 }
