@@ -1,6 +1,7 @@
 package com.dcoker.zone.home.fragment;
 
-import android.os.Bundle;;
+import android.os.Bundle;
+import android.util.Log;;
 
 import com.dcoker.zone.Activity.HomeActivity;
 import com.dcoker.zone.R;
@@ -15,6 +16,8 @@ import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.callback.StringCallback;
+import com.lzy.okgo.model.Response;
+import com.lzy.okgo.request.base.Request;
 
 import java.util.List;
 
@@ -74,10 +77,34 @@ public class StartFragment extends BaseFragment {
                 .params("uid", user.getId())
                 .tag(this)
                 .execute(new StringCallback() {
+
+
+                    @Override
+                    public void onError(Response<String> response) {
+                        super.onError(response);
+                        recyclerView.setEmptyView("你还没有关注好友哦");
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        super.onFinish();
+                        recyclerView.isLoadMoreEnable = false;
+
+                    }
+
+                    @Override
+                    public void onStart(Request<String, ? extends Request> request) {
+                        super.onStart(request);
+
+
+                    }
+
                     @Override
                     public void onSuccess(com.lzy.okgo.model.Response<String> response) {
                         Gson gson = new Gson();
                         String s = response.body().toString();
+                        Log.i("StartFragment",s);
                         IndexData indexdata = gson.fromJson(/*Testdata.indexData*/s, IndexData.class);
 
                         if (indexdata.getData() != null && indexdata.getData().getState() == 0) {

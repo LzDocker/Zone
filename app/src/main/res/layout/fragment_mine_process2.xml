@@ -94,7 +94,6 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginStart="15dp"
                     android:gravity="center"
-                    android:src="@drawable/__picker_camera"
                  />
 
 

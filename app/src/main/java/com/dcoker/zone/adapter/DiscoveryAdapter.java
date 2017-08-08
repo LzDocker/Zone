@@ -21,6 +21,7 @@ import com.dcoker.zone.view.MyBanner;
 import com.dcoker.zone.weight.GlideCircleTransform;
 import com.dcoker.zone.weight.GlideRoundTransform;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cn.kevin.banner.BannerViewPager;
@@ -34,7 +35,7 @@ public class DiscoveryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     private int TYPE_NORMAL = 0x1001;
 
     private Context context;
-    List<articleCommentRepy> replyList;
+    List<articleCommentRepy> replyList = new ArrayList<>();
 
     public DiscoveryAdapter(Context context) {
         this.context = context;
@@ -86,7 +87,7 @@ public class DiscoveryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
             normalVH.tv_title.setText(article.getTitle());
             normalVH.tv_name.setText(user.getUname());
-            normalVH.tv_user_desc.setText("发表" + user.getArticles() + "篇文章 . " + "获得了" + user.getLikes() + "个赞");
+            normalVH.tv_user_desc.setText(article.getCreatetime());
             Glide.with(context).load(NetConfig.Base + user.getUicon())
                     .transform(new GlideCircleTransform(context))
                     .placeholder(R.mipmap.my_nomal)
@@ -119,9 +120,22 @@ public class DiscoveryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         return replyList == null ? 0 : replyList.size();
     }
 
-    public void bindData(List<articleCommentRepy> replyList) {
-        this.replyList = replyList;
+    public void bindData(List<articleCommentRepy> replyList,Boolean isrefresh) {
+
+        if(isrefresh){
+            this.replyList.clear();
+        }
+
+        int start = 0;
+        if(this.replyList!=null&&this.replyList.size()>0){
+            start = this.replyList.size();
+        }
+
+        this.replyList.addAll(start,replyList);
         notifyDataSetChanged();
+
+
+
     }
 
 

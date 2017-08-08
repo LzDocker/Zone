@@ -25,7 +25,7 @@ public class DisFragment extends BaseFragment {
     @BindView(R.id.refresh)
     SwipeRecyclerView recyclerView;
     DiscoveryAdapter adapter;
-    int size = 1;
+    int size = 0;
 
 
     @Override
@@ -48,8 +48,9 @@ public class DisFragment extends BaseFragment {
         recyclerView.setOnLoadListener(new SwipeRecyclerView.OnLoadListener() {
             @Override
             public void onRefresh() {
-                size = 1;
+                size = 0;
                 initData(size);
+
             }
 
             @Override
@@ -74,7 +75,7 @@ public class DisFragment extends BaseFragment {
                 .cacheMode(CacheMode.REQUEST_FAILED_READ_CACHE)
                 .cacheKey("AttenFragment")
                 .params("GroupTag", "未分类")
-                .params("page", 0)
+                .params("page", size)
                 .tag(this)
                 .execute(new StringCallback() {
                     @Override
@@ -88,15 +89,19 @@ public class DisFragment extends BaseFragment {
                         if (indexdata.getData() != null && indexdata.getData().getState() == 0) {
                             List<articleCommentRepy> replyList = indexdata.getData().getArticleCommentReplyList();
                             //造一条数据，作为header的占位
-                            if(size == 1){
+                            if(size == 0){
                                 articleCommentRepy repy = new articleCommentRepy();
                                 replyList.add(0,repy);
+                                adapter.bindData(replyList,true);
+                            }else{
+                                adapter.bindData(replyList,false);
                             }
-                            adapter.bindData(replyList);
                             recyclerView.complete();
-                            recyclerView.onNoMore();
+                            if (replyList.size()<10){
+                                recyclerView.onNoMore();
+                            }
                         } else {
-                            recyclerView.setEmptyView("暂无数据～");
+                            recyclerView.setEmptyView("没有更多了～");
                             recyclerView.complete();
                         }
                     }

@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:id="@+id/ll_tool"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -47,7 +47,7 @@
             android:visibility="gone" />
 
     </RelativeLayout>
-
+-->
     <com.dcoker.zone.widget.SwipeRecyclerView
         android:id="@+id/refresh"
         android:layout_width="match_parent"

@@ -43,8 +43,11 @@ public class AttenAdapter extends RecyclerView.Adapter<AttenAdapter.ViewHolder> 
     }
 
     public void bindData(List<Attenlist> mList, boolean b) {
-        this.mList.addAll(mList);
+        this.mList=mList;
         this.flag = b;
+        if(flag){
+            notifyDataSetChanged();
+        }
     }
 
 

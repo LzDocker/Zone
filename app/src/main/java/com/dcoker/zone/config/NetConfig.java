@@ -29,7 +29,4 @@ public class NetConfig {
     public static final String uploadPic = "http://172.16.192.249/zone_docker/UploadPictures";
     public static final String uploadArticle = "http://172.16.192.249/zone_docker/UploadArticle";*/
 
-
-
-
 }

@@ -130,8 +130,9 @@ public class HomeActivity extends AppCompatActivity {
         MineFragment mineFragment = new MineFragment();
 
 
-        fragments.add(startFragment);
+
         fragments.add(disFragment);
+        fragments.add(startFragment);
         fragments.add(msgFragment);
         fragments.add(mineFragment);
 
@@ -171,24 +172,18 @@ public class HomeActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn_mine:
-
                 viewPager.setCurrentItem(3, false);
-
-
                 break;
-
             case R.id.image_add:
-
                 Intent intent = new Intent(HomeActivity.this, EditActivity.class);
                 intent.putExtra("user", user);
                 startActivity(intent);
-
                 break;
-
         }
-
-
     }
+
+
+
 
 
     public User getUser() {
