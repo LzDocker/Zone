@@ -51,7 +51,10 @@
     <com.dcoker.zone.widget.SwipeRecyclerView
         android:id="@+id/refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        >
 
     </com.dcoker.zone.widget.SwipeRecyclerView>
 

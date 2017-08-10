@@ -5,7 +5,6 @@ import android.util.Log;
 
 import com.dcoker.zone.R;
 import com.dcoker.zone.adapter.DiscoveryAdapter;
-
 import com.dcoker.zone.config.NetConfig;
 import com.dcoker.zone.entity.HotArticleBean;
 import com.dcoker.zone.entity.articleCommentRepy;
@@ -14,7 +13,6 @@ import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheMode;
 import com.lzy.okgo.callback.StringCallback;
-
 
 import java.util.List;
 

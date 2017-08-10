@@ -3,12 +3,15 @@ package com.dcoker.zone.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -80,7 +83,7 @@ public class HomeActivity extends AppCompatActivity {
         Zone zone = (Zone) getApplication();
         zone.Setuser(user);
         sp = this.getPreferences(Context.MODE_PRIVATE);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
         start.setChecked(true);
 
 
@@ -130,9 +133,8 @@ public class HomeActivity extends AppCompatActivity {
         MineFragment mineFragment = new MineFragment();
 
 
-
-        fragments.add(disFragment);
         fragments.add(startFragment);
+        fragments.add(disFragment);
         fragments.add(msgFragment);
         fragments.add(mineFragment);
 

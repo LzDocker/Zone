@@ -99,6 +99,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
        //
          Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
+         //Intent intent = new Intent(WelcomeActivity.this,TestActivity.class);
          startActivity(intent);
          finish();
      }
